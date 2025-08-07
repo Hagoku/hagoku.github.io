@@ -22,7 +22,7 @@ p {
 	margin: 0;
 
 	font-family: monospace;
-	font-size: clamp(12px, 1.5vw, 15px);
+	font-size: 15px;
 	line-height: 1.5;
 
 	color: white;
@@ -45,4 +45,10 @@ p {
 	0% {opacity: 1;}
 	50% {opacity: 0;}
 	100% {opacity: 1;}
+}
+
+@media screen and (max-width: 600px) {
+	p {
+		font-size: 12px;
+	}
 }
