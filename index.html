@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang=en>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="index, follow">
+		<meta name="description" content="">
+
+		<title>user@host: ~/hello!</title>
+
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body class="crt">
+
+		<!-- Introduction -->
+
+		<p><span class="identity-executable">user@host</span>:<span class="working-directory">~</span>$ ./welcome.sh</p>
+		<p>Welcome to my site!</p>
+
+		<!-- Catagory -->
+
+		<p><span class="identity-executable">user@host</span>:<span class="working-directory">~</span>$ ls -l<span class="comment"> # Click on one of the below files!</span></p>
+		<p>-rwxr--r-- 1 user user 1249 Aug 5 23:50 <span class="identity-executable">welcome.sh</span></p>
+		<p>-rw-r--r-- 1 user user 1642 Aug 6 20:00 <span class="clickable" onclick="show(2)">comingsoon.txt</span></p>
+		<p>-rw-r--r-- 1 user user 9421 Aug 6 18:32 <span class="clickable" onclick="show(1)">about.txt</span></p>
+
+		<!-- Content -->
+
+		<div id="item2" class="hidden">
+			<p><span class="identity-executable">user@host</span>:<span class="working-directory">~</span>$ cat comingsoon.txt</p>
+			<p>More coming soon!</p>
+		</div>
+		<div id="item1" class="hidden">
+			<p><span class="identity-executable">user@host</span>:<span class="working-directory">~</span>$ cat about.txt</p>
+			<p>For the past while, I have spent my time absorbing theory--reading textbooks, documentation, and watching videos--on as wide of a range of topics as I could manage. But after endless consumption, something always felt incomplete. Knowledge and ideas sitting in my head felt unfulfilling.<br><br>Thus, I decided to build this site--to complement my learning with practice and creation, and to share it with anyone who might be curious.<br><br>I hope you enjoy your stay!</p>
+		</div>
+
+		<p><span class="identity-executable">user@host</span>:<span class="working-directory">~</span>$ <span class="cursor">_</span></p>
+
+		<script>
+			let numberOfItems = 2;
+			function show(n) {
+				for (let i = 1; i <= numberOfItems; i++) {
+					document.getElementById('item' + i).style.display = 'none';
+				}
+				document.getElementById('item' + n).style.display = 'block';
+				
+			}
+		</script>
+	</body>
+</html>
