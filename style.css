@@ -22,7 +22,7 @@ p {
 	margin: 0;
 
 	font-family: monospace;
-	font-size: clamp(12px, 1.5vw, 16px);
+	font-size: clamp(12px, 1.5vw, 15px);
 	line-height: 1.5;
 
 	color: white;
