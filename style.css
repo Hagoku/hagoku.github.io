@@ -51,4 +51,7 @@ p {
 	p {
 		font-size: 12px;
 	}
+	.hide-on-small-display {
+		display: none;
+	}
 }
